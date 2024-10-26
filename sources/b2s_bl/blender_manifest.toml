@@ -1,0 +1,14 @@
+schema_version = "1.0.0"
+
+id = "b2s_bl"
+name = "Blender SketchUp Swaper"
+version = "1.0.3"
+tagline = "Blender与SketchUp模型交换工具"
+maintainer = "墨水,xz-blender"
+type = "add-on"
+tags = [ "Import-Export",]
+blender_version_min = "4.2.0"
+license = [ "SPDX:GPL-3.0-or-later",]
+website = "https://github.com/INK-JIa/blender_sketchup-b2s"
+copyright = [ "blender",]
+wheels = []
