@@ -17,32 +17,30 @@ def contains_chinese(string):
 
 
 def get_cache_dir():
+    cache_dir = None
     if sys.platform == "win32":
-        return Path.home() / "AppData" / "Local"
-    elif sys.platform == "darwin":
-        return Path.home() / "Library" / "Caches"
+        cache_dir = Path.home() / 'Documents'
     else:
-        self.report({"ERROR"}, "您的系统不支持自动缓存路径，请手动指定缓存文件夹!")
-        return
+        print("您的系统不支持自动缓存路径，请手动指定缓存文件夹!")
+        return ''
 
     if contains_chinese(str(cache_dir)):
-        self.report({"ERROR"}, "用户名包含中文字符，请手动指定缓存文件夹!")
-        return
-
-    return cache_dir
+        print("用户名包含中文字符，请手动指定缓存文件夹!")
+        return cache_dir
 
 
-def get_b2s_temp_dir(self):
+
+def get_b2s_temp_dir():
     if get_cache_dir() != None:
-        b2s_temp_dir = get_cache_dir() / "b2s_temp"
+        b2s_temp_dir = get_cache_dir()/'blendsu'
         if b2s_temp_dir.exists():
             print(f"b2s 缓存文件夹已存在，路径为: {b2s_temp_dir}")
         else:
-            print(f"b2s 缓存文件夹不存在，正在创建...")
             b2s_temp_dir.mkdir(parents=True, exist_ok=True)
+            print(f"b2s 缓存文件夹不存在，已创建")
         return b2s_temp_dir
     else:
-        return None
+        return ''
 
 
 def GetTranslationDict():

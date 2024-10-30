@@ -14,7 +14,7 @@ module MyPlugin
   # 插件名称
   PLUGIN_NAME = "b2s(blender与su互导插件)"
   # 插件版本
-  VERSION = "1.0.3"
+  VERSION = "1.0.4"
   
   # 创建新的扩展类
   extension = SketchupExtension.new(PLUGIN_NAME, 'b2s')

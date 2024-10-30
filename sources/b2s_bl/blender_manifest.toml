@@ -2,7 +2,7 @@ schema_version = "1.0.0"
 
 id = "b2s_bl"
 name = "Blender SketchUp Swaper"
-version = "1.0.3"
+version = "1.0.4"
 tagline = "Blender与SketchUp模型交换工具"
 maintainer = "墨水,xz-blender"
 type = "add-on"
